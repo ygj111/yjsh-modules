@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2016.06.14 时间 01:57:39 PM CST 
+
+  -->
+  <bindings xmlns:tns="http://webservice.ops.platform.hhh.com/" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="com.hhh.opsservice.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="~tns:getDeploymentInfo">
+      <class ref="com.hhh.opsservice.wsdl.GetDeploymentInfo"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getDeploymentInfoResponse">
+      <class ref="com.hhh.opsservice.wsdl.GetDeploymentInfoResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getProductInfo">
+      <class ref="com.hhh.opsservice.wsdl.GetProductInfo"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getProductInfoResponse">
+      <class ref="com.hhh.opsservice.wsdl.GetProductInfoResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getSystemException">
+      <class ref="com.hhh.opsservice.wsdl.GetSystemException"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getSystemExceptionForWeek">
+      <class ref="com.hhh.opsservice.wsdl.GetSystemExceptionForWeek"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getSystemExceptionForWeekResponse">
+      <class ref="com.hhh.opsservice.wsdl.GetSystemExceptionForWeekResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getSystemExceptionResponse">
+      <class ref="com.hhh.opsservice.wsdl.GetSystemExceptionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogException">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogException"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogExceptionResponse">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogExceptionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogLogin">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogLogin"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogLoginResponse">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogLoginResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogOperation">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogOperation"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogOperationResponse">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogOperationResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogPerformance">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogPerformance"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogPerformanceResponse">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogPerformanceResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogRun">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogRun"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeLogRunResponse">
+      <class ref="com.hhh.opsservice.wsdl.WriteLogRunResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeServerRun">
+      <class ref="com.hhh.opsservice.wsdl.WriteServerRun"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:writeServerRunResponse">
+      <class ref="com.hhh.opsservice.wsdl.WriteServerRunResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:deploymentInfoModel">
+      <class ref="com.hhh.opsservice.wsdl.DeploymentInfoModel"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:systemInfoModel">
+      <class ref="com.hhh.opsservice.wsdl.SystemInfoModel"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:serversInfoModel">
+      <class ref="com.hhh.opsservice.wsdl.ServersInfoModel"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:productInfoModel">
+      <class ref="com.hhh.opsservice.wsdl.ProductInfoModel"/>
+    </bindings>
+  </bindings>
+</bindings>
