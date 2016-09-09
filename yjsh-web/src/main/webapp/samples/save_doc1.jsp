@@ -2,7 +2,7 @@
 
 <%
 FileSaver fs=new FileSaver(request,response);
-fs.saveToFile(request.getSession().getServletContext().getRealPath("")+"doc/saved_doc1.docx");
+fs.saveToFile(request.getSession().getServletContext().getRealPath("")+"/doc/saved_doc1.docx");
 fs.close();
 %>
 <!DOCTYPE html>

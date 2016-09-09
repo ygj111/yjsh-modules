@@ -53,7 +53,7 @@ public class ShiroDBRealm extends AuthorizingRealm {
 		Set<String> roles = new HashSet<>();
 		if(beans != null){
 			for(RoleBean bean : beans){
-				roles.add(bean.getId());
+				roles.add(bean.getName());
 			}
 		}
 		subject.setAuthorities(permissSet);
@@ -96,15 +96,17 @@ public class ShiroDBRealm extends AuthorizingRealm {
 			Set<String> roles = new HashSet<>();
 			if(beans != null){
 				for(RoleBean bean : beans){
-					roles.add(bean.getId());
+					roles.add(bean.getName());
 				}
 			}
 			subject.setAuthorities(permissSet);
 			subject.setRoles(roles);
 			subject.setAuthorized(true);
-		}		
-		info.addStringPermissions(subject.getAuthorities());
-		info.addRoles(subject.getRoles());
+		}
+		if(subject.getAuthorities() != null)
+			info.addStringPermissions(subject.getAuthorities());
+		if(subject.getRoles() != null)
+			info.addRoles(subject.getRoles());
 		return info;
 	}
 	

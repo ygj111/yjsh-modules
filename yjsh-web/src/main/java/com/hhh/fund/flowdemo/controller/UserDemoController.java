@@ -1,5 +1,6 @@
 package com.hhh.fund.flowdemo.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,4 +28,21 @@ public class UserDemoController {
 		client.uploadLogException("5191b6589327472cb5d0959d7b7fc083", "yjsh_web", "this is test value");
 		return "success";
 	}
+	
+//	@RequestMapping(value="/htmltopdf")
+//	public void htmlToPdf(HttpServletRequest request, HttpServletResponse response){
+//		String path = request.getParameter("path");  
+//        
+//          
+//        String pdfPath = request.getSession().getServletContext().getRealPath("/tmp");  
+//        String pdfName = UUID.randomUUID().toString() + ".pdf";  
+//          
+//        if(HtmlToPdf.convert(path, pdfPath + "/" + pdfName)){  
+//            try {
+//				response.sendRedirect(request.getContextPath() + "/tmp/" + pdfName);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}  
+//        }
+//	}
 }

@@ -45,6 +45,7 @@ public class LoginController {
 		Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(),user.getPassword());
 		token.setRememberMe(user.isRememberMe());
+		System.out.println("@@@@@@@@@@@@@@@@@@@@############################=="+request.getParameter("username"));
 		try {
 			subject.login(token);
 			user = ShiroUtils.getUser();

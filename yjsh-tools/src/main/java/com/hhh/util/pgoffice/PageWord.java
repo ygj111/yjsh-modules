@@ -19,7 +19,7 @@ public  class PageWord {
 	 * @param startRowNum 填充表格的起始行号，start with 1。
 	 * @param data 填充的数据（String数组）
 	 */
-	public static void fillTableData(WordDocument doc, String bookmark, int tableIndex, int startRowNum, ArrayList data) {
+	public static void fillTableData(WordDocument doc, String bookmark, int tableIndex, int startRowNum, ArrayList <String []>data) {
 		//打开数据区域
 		DataRegion dataRegion = doc.openDataRegion(bookmark);
 		//打开table，openTable(index)方法中的index代表Word文档中table位置的索引，从1开始
@@ -59,11 +59,11 @@ public  class PageWord {
 	 * @param dataSet key为标签，value为填充值
 	 * @return
 	 */
-	public static void fillData(WordDocument doc, HashMap dataSet) {
+	public static void fillData(WordDocument doc, HashMap<String, String> dataSet) {
 		
 		if (dataSet != null && !dataSet.isEmpty()) {
-			Set keys = dataSet.keySet();
-			Iterator ite = keys.iterator();
+			Set<String> keys = dataSet.keySet();
+			Iterator<String> ite = keys.iterator();
 			String key = null;
 			String data = null;
 			while(ite.hasNext()) {
@@ -89,10 +89,10 @@ public  class PageWord {
 	 * @param doc doc word操作对象
 	 * @param dataSet key为DataTag，value为填充值
 	 */
-	public static void fillTagData(WordDocument doc, HashMap dataSet) {
+	public static void fillTagData(WordDocument doc, HashMap<String, String> dataSet) {
 		if (dataSet != null && !dataSet.isEmpty()) {
-			Set keys = dataSet.keySet();
-			Iterator ite = keys.iterator();
+			Set<String> keys = dataSet.keySet();
+			Iterator<String> ite = keys.iterator();
 			String key = null;
 			String data = null;
 			while(ite.hasNext()) {

@@ -35,7 +35,7 @@ public class LogUploadClient extends WebServiceGatewaySupport {
 				String username = ShiroUtils.getFullname();
 				writeLogException(dp_code, username, module, content);
 			}
-		}).start();;
+		}).start();
 	}
 	
 	/**

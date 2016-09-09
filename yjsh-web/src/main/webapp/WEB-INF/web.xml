@@ -46,7 +46,7 @@
 		<filter-name>characterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
+
 	<!-- Shiro filter -->
 	<!-- The filter-name matches name of a 'shiroFilter' bean inside 'SecurityConfig.java' -->
 	<filter>
@@ -65,6 +65,22 @@
  	</filter-mapping> 
 	
 	
+	<filter>
+ 		<filter-name>xssFilter</filter-name>
+		<filter-class>
+ 			org.springframework.web.filter.DelegatingFilterProxy
+ 		</filter-class>
+ 		<init-param>
+ 			<param-name>targetFilterLifecycle</param-name>
+ 			<param-value>true</param-value>
+ 		</init-param>
+ 	</filter>
+ 	<filter-mapping>
+ 		<filter-name>xssFilter</filter-name>
+ 		<url-pattern>/*</url-pattern>
+ 		<dispatcher>REQUEST</dispatcher> 
+ 	</filter-mapping> 
+	
 	<!-- spring DispatcherServlet -->
 	<servlet>
 		<servlet-name>springMVC</servlet-name>
@@ -82,6 +98,7 @@
 	<servlet-mapping>
 		<servlet-name>springMVC</servlet-name>
 		<url-pattern>/</url-pattern>
+		
 	</servlet-mapping>
 	
 	<servlet>

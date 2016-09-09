@@ -15,7 +15,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
 import javax.servlet.Filter;
 
 import org.apache.shiro.mgt.SecurityManager;
@@ -25,8 +24,6 @@ import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +31,7 @@ import org.springframework.core.env.Environment;
 
 import com.hhh.security.ShiroDBRealm;
 import com.hhh.security.ShiroKeyRealm;
+import com.hhh.security.XssFilter;
 
 /**
  * Shiro配置
@@ -86,6 +84,11 @@ public class SecurityConfig implements EnvironmentAware  {
 	@Bean
 	public LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {
 		return new LifecycleBeanPostProcessor();
+	}
+	
+	@Bean(name="xssFilter")
+	public Filter xssFilter(){
+		return new XssFilter();
 	}
 	
 	@Bean(name="shiroFilter")
